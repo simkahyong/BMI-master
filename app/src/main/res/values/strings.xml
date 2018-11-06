@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BMI</string>
+    <string name="results">Results</string>
+    <string name="normal">Normal</string>
+    <string name="weight_kg">Weight (kg)</string>
+    <string name="height_m">Height (m)</string>
+    <string name="calculate">Calculate</string>
+    <string name="under_weight">Under Weight</string>
+    <string name="error_message" />
+    <string name="bmi">BMI</string>
+    <string name="over_weight">Over Weight</string>
+</resources>
