@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String BMI_MESSAGE = "my.edu.taruc.BMI.MESSAGE";
+    public static final String BMI_MESSAGE = "my.edu.taruc.bmi.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,20 +46,23 @@ public class MainActivity extends AppCompatActivity {
                 if (BMI >= 0 && BMI < 18) {
                     Intent intent = new Intent(this, Main4Activity.class);
                     String stringBMI;
-                    stringBMI = String.valueOf(BMI);
-                    intent.putExtra(BMI_MESSAGE, stringBMI);
+                    intent.putExtra(BMI_MESSAGE, BMI);
+                    startActivity(intent);
 
                 } else if (BMI >= 18 && BMI <= 25) {
                     Intent intent = new Intent(this, Main2Activity.class);
                     String stringBMI;
                     stringBMI = String.valueOf(BMI);
-                    intent.putExtra(BMI_MESSAGE, stringBMI);
+                    intent.putExtra(BMI_MESSAGE, String.format(stringBMI,2));
+                    startActivity(intent);
 
                 } else { // BMI > 25
                     Intent intent = new Intent(this, Main3Activity.class);
                     String stringBMI;
                     stringBMI = String.valueOf(BMI);
-                    intent.putExtra(BMI_MESSAGE, stringBMI);
+                    String.format(stringBMI,2);
+                    intent.putExtra(BMI_MESSAGE, String.format(stringBMI,2));
+                    startActivity(intent);
                 }
             }
         } catch(Exception e){

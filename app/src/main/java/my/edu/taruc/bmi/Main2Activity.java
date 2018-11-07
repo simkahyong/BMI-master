@@ -17,8 +17,8 @@ public class Main2Activity extends AppCompatActivity {
             TextView textViewBMI2;
             textViewBMI2 = findViewById(R.id.textViewBMI2);
             String stringBMI;
-            stringBMI = intent.getStringExtra(MainActivity.BMI_MESSAGE);
-            textViewBMI2.setText(stringBMI);
+            stringBMI = intent.getDoubleExtra(MainActivity.BMI_MESSAGE,0);
+            textViewBMI2.setText(String.format("%f.2",BMI));
         }
     }
 }
